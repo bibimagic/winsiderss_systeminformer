@@ -1,9 +1,6 @@
 ﻿$PackageSourceUrl = "https://github.com/winsiderss/si-builds/releases/download/3.1.24232/systeminformer-3.1.24232-release-bin.zip"
 $Architecture = if (Get-OSArchitectureWidth 32) { "i386" } else { "amd64" }
-$InstallDirectory =
-Join-Path `
-  -Path $(if (Get-OSArchitectureWidth 64) { $Env:ProgramW6432 } else { $Env:ProgramFiles }) `
-  -ChildPath "SystemInformer"
+$InstallDirectory = "$(if (Get-OSArchitectureWidth 64) { $Env:ProgramW6432 } else { $Env:ProgramFiles })\SystemInformer"
 
 $PackageParams = @{
   PackageName    = "systeminformer-nightlybuilds"
@@ -15,6 +12,12 @@ $PackageParams = @{
 }
 
 Install-ChocolateyZipPackage @PackageParams
+
+# Restore backed up setting file
+$SettingFile = "$Env:TEMP\SystemInformer.exe.settings.xml"
+if (Test-Path $SettingFile) {
+  Copy-Item -Path $SettingFilePath -Destination "$InstallDirectory\$Architecture"
+}
 
 $PackageParams = Get-PackageParameters
 
