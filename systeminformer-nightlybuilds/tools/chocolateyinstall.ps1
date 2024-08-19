@@ -1,4 +1,4 @@
-﻿$PackageSourceUrl = "https://github.com/winsiderss/si-builds/releases/download/3.1.24208/systeminformer-3.1.24208-release-bin.zip"
+﻿$PackageSourceUrl = "https://github.com/winsiderss/si-builds/releases/download/3.1.24232/systeminformer-3.1.24232-release-bin.zip"
 $Architecture = if (Get-OSArchitectureWidth 32) { "i386" } else { "amd64" }
 $InstallDirectory =
 Join-Path `
@@ -9,7 +9,7 @@ $PackageParams = @{
   PackageName    = "systeminformer-nightlybuilds"
   UnzipLocation  = $InstallDirectory
   Url            = $PackageSourceUrl
-  Checksum       = "86AA4237565375FF214368FA855B8304BC4675F4BD547F7C7EF654C3A9BE5FD1"
+  Checksum       = "5d0ca822a5a34ede6abe6a89170725e2b63eae1eeadcaa3fa0f1fda2d8da8d2a"
   ChecksumType   = "sha256"
   SpecificFolder = $Architecture
 }
