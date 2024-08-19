@@ -29,12 +29,13 @@ Features
     100% Free Software (MIT)
 
 #### Package Parameters
-The package parameters can be set - 
+These package parameters can be set - 
 
  * `/defaultTaskMgr` - Make SystemInformer the default task manager.
+ * `/shortcut` - Install a shortcut in %public%\Desktop.
 
 These parameters can be passed with `--params`.
-For example: `--params="'/defaultTaskMgr'"`.</description>
+For example: `--params="'/defaultTaskMgr /shortcut'"`.</description>
     <copyright>2008-2024 / System Informer / Winsider Seminars and Solutions, Inc.</copyright>
     <releaseNotes>https://github.com/winsiderss/systeminformer/commits/master/</releaseNotes>
     <tags>system informer systeminformer processhacker task manager monitor process resource graph statistic</tags>
