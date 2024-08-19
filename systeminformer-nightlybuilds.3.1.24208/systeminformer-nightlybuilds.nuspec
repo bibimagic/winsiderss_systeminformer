@@ -26,7 +26,15 @@ Features
     View detailed stack traces with kernel-mode, WOW64 and .NET support.
     Go beyond services.msc: create, edit and control services.
     Small, portable and no installation required.
-    100% Free Software (MIT)</description>
+    100% Free Software (MIT)
+
+#### Package Parameters
+The package parameters can be set - 
+
+ * `/defaultTaskMgr` - Make SystemInformer the default task manager.
+
+These parameters can be passed with `--params`.
+For example: `--params="'/defaultTaskMgr'"`.</description>
     <copyright>2008-2024 / System Informer / Winsider Seminars and Solutions, Inc.</copyright>
     <releaseNotes>https://github.com/winsiderss/systeminformer/commits/master/</releaseNotes>
     <tags>system informer systeminformer processhacker task manager monitor process resource graph statistic</tags>

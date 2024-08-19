@@ -23,3 +23,10 @@ $ShortcutParams = @{
 }
 
 Install-ChocolateyShortcut @ShortcutParams
+
+$PackageParams = Get-PackageParameters
+if ($PackageParams["defaultTaskMgr"]) {
+  $RegPath = "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\taskmgr.exe"
+  if (-not $(Test-Path $RegPath)) { New-Item $RegPath }
+  New-ItemProperty -Path $RegPath -Name "Debugger" -PropertyType "String" -Value "$InstallDirectory\$Architecture\SystemInformer.exe"
+}
