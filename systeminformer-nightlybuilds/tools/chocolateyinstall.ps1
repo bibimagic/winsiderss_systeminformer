@@ -9,8 +9,8 @@ $PackageParams = @{
   PackageName    = "systeminformer-nightlybuilds"
   UnzipLocation  = $InstallDirectory
   Url            = $PackageSourceUrl
-  Checksum       = '86AA4237565375FF214368FA855B8304BC4675F4BD547F7C7EF654C3A9BE5FD1'
-  ChecksumType   = 'sha256'
+  Checksum       = "86AA4237565375FF214368FA855B8304BC4675F4BD547F7C7EF654C3A9BE5FD1"
+  ChecksumType   = "sha256"
   SpecificFolder = $Architecture
 }
 
